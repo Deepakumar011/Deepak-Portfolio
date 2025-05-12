@@ -1,0 +1,1367 @@
+/* Reset default margin and padding, and set box-sizing for consistent sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode body style */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* ===================== NAVBAR STYLES ===================== */
+
+/* Header/navbar container */
+header {
+  background: #222;
+  color: white;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* Keep navbar on top */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Navbar inner container */
+.nav-container {
+  max-width: 1116px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  gap: 38px;
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #004ae9;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* Highlight part of logo with animation */
+.logo .dotdev {
+  color: #0ecf8f;
+  animation: blink 1.2s infinite alternate;
+}
+
+/* Keyframe for blinking effect */
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Navigation links container */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style individual nav links */
+.nav-links ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fcfcfc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.nav-links ul li a:hover {
+  color: #fdd805;
+}
+
+/* Underline animation on hover */
+.nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #0ecf8f;
+  transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===================== SEARCH BAR ===================== */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 36px;
+}
+
+/* Input inside search bar */
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  flex: 1;
+  background: transparent;
+  color: #000;
+  min-width: 120px;
+}
+
+/* Search button */
+.search-btn {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover color for search icon */
+.search-btn:hover {
+  color: #ffcc00;
+}
+
+/* Dark mode overrides */
+.dark-mode .search-bar {
+  background: #333;
+  border: 1px solid #555;
+}
+.dark-mode .search-bar input {
+  color: #fff;
+}
+.dark-mode .search-btn {
+  color: #ccc;
+}
+
+/* ===================== HAMBURGER MENU ===================== */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* ===================== RESPONSIVE NAV ===================== */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    background: #363d4b;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+}
+
+/* Hide search bar below 930px */
+@media (max-width: 930px) {
+  .search-container {
+    display: none;
+  }
+}
+
+/* ===================== HERO SECTION ===================== */
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(287deg, #fff, #252cfc);
+  color: #0f172a;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Hero content wrapper */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* Text section of hero */
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 750px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #0f0e0e;
+  word-break: break-word;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-top: 20px;
+}
+
+/* Highlighted animated typing text */
+#typed-text {
+  color: rgb(255, 217, 0);
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* CTA buttons */
+.cta-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: #f59e0b;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d97706;
+}
+
+/* Profile image on hero section */
+.profile-image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffcc00;
+}
+
+/* ===================== SOCIAL ICONS ===================== */
+
+.home-footer-social {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.home-social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.home-social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-social-icons a:hover {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.home-social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.home-social-icons a[href^="mailto"] {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive styles for hero */
+@media (max-width: 830px) {
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .profile-image {
+    display: none;
+  }
+}
+
+
+
+/*==================================== ABOUT SECTION ============================================*/
+/* Styles for the entire about section container */
+#about {
+  padding: 80px 20px; /* Space inside the section */
+  text-align: center;  /* Center-align all child text */
+}
+
+/* Wrapper for the about section */
+.about {
+  height: 100%; /* Take full height */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Heading of the about section */
+#about h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+/* Container for image and text side by side */
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  gap: 100px; /* Space between items */
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Wrapper for profile image with 3D effect setup */
+.profile-img-wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px; /* Enables 3D transform effects */
+}
+
+/* Profile image itself */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover;
+  transition: transform 0.6s, opacity 0.6s;
+  border: 4px solid #ffcc00;
+  box-shadow: -15px 1px 20px 1px rgba(56, 189, 248, 0.2); /* Soft shadow */
+}
+
+/* Rotate and zoom effect on hover */
+.profile-img-wrapper:hover .profile-pic {
+  transform: scale(1.05) rotateY(180deg); /* Flip effect */
+  opacity: 0.9;
+}
+
+/* Text section beside the image */
+.about-text {
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Read More Button */
+.read-more-btn {
+  margin-top: 15px;
+  padding: 16px 20px;
+  border: none;
+  background-color: #ffcc00;
+  color: #222;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.read-more-btn:hover {
+  background-color: #e6b800;
+  color: #000000;
+}
+
+/* Initially hidden text inside the about section */
+#more-text {
+  display: inline-block;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+/* Shown state of hidden text */
+#more-text.show {
+  opacity: 1;
+  max-height: 300px;
+}
+
+/* Responsive Design for tablets and mobiles */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .about-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+/* Smooth transition on show/hide */
+#more-text {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Redundant hidden class (already defined above) */
+.hidden {
+  display: none;
+}
+.read-more-btn {
+  background-color: #38bdf8;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0ea5e9;
+}
+
+  /*  ============================================== skills ========================================= */
+
+/* ✅ Key Functional Areas */
+/* Skills Section Base Styling */
+#skills {
+  background: #0f172a; /* Dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.skills-section {
+  padding: 60px 20px;
+}
+.skills-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+}
+.skills-section h2 span {
+  color: #38bdf8; /* Blue highlight for span */
+}
+/* 🔹 Skills Container (Technical Skills on the Left) */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 40px;
+}
+.skills-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+.skills-left h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+}
+
+/* Skill Progress Bars */
+
+.skill-bar {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.skill-bar img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.skill-bar span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #facc15;
+}
+.bar {
+  background: #1e293b;
+  height: 14px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.fill {
+  background: linear-gradient(to right, #22d3ee, #3b82f6);
+  height: 100%;
+  width: 0; /* Controlled via inline style or JS */
+  text-align: right;
+  padding-right: 8px;
+  animation: fillBar 2s ease forwards;
+}
+@keyframes fillBar {
+  to {
+    width: var(--width); /* custom property for width fill */
+  }
+}
+
+/* 🔹 Professional Skills (Right Side - Circular Bars) */
+
+.skills-right .circle-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+.circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+.circle-wrapper:nth-child(n) {
+  animation-delay: 0.2s, 0.4s, 0.6s, 0.8s;
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#334155 0deg, #334155 360deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateCircle 4s linear infinite;
+}
+.circle .number {
+  position: absolute;
+  font-size: 1.2rem;
+  color: white;
+}
+.circle-wrapper p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+@keyframes rotateCircle {
+  0% { background: conic-gradient(#38bdf8 0deg, #334155 360deg); }
+  50% { background: conic-gradient(#9333ea 0deg, #334155 360deg); }
+  100% { background: conic-gradient(#38bdf8 0deg, #334155 360deg); }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* 🔹 Tools Section (Icons Grid Below) */
+
+.tools-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.tools-section h3 {
+  font-size: 2.3rem;
+  color: #38bdf8;
+  margin-bottom: 40px;
+}
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.tool-box {
+  width: 110px;
+  height: 110px;
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid #38bdf8;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  animation: zoomIn 0.6s ease;
+}
+.tool-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(147, 51, 234, 0.4);
+  border-color: #9333ea;
+}
+.tool-box img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+.tool-name {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+.tool-box a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* 
+✅ Suggestions to Improve:
+Responsiveness (Mobile):
+Add this at the bottom for better mobile layout: */
+
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tools-container {
+    gap: 20px;
+  }
+}
+.fill {
+  transition: width 1s ease-in-out;
+}
+.tool-box i, .tool-box img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+/* //=============================/* project  *======================================================== */
+/* ================================
+   Projects Section Styling
+   ================================ */
+.projects-section {
+  padding: 25px 100px;
+  background: #adafb2; /* Light gray background */
+  color: white;
+  text-align: center;
+}
+
+/* ================================
+   Grid Layout for Projects
+   ================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 50px; /* Space between project cards */
+}
+
+/* ================================
+   Project Card Styling
+   ================================ */
+.project-card {
+  background: rgba(30, 41, 59, 0.6); /* Semi-transparent dark background */
+  border: 1px solid #38bdf8; /* Blue border */
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+
+  /* Animation */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02); /* Lift and zoom on hover */
+  box-shadow: 0 12px 24px rgba(56, 189, 248, 0.5), 
+              0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+/* ================================
+   Image/Video Slider Container
+   ================================ */
+.image-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintain consistent ratio */
+  background-color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-slider img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.image-slider video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Use cover to fill container */
+  border-radius: 12px;
+}
+
+/* ================================
+   Slider Navigation Buttons
+   ================================ */
+.image-slider .prev,
+.image-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.image-slider .prev { left: 10px; }
+.image-slider .next { right: 10px; }
+
+/* ================================
+   Project Content Styling
+   ================================ */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h4 {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.project-content p,
+.stack {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.stack {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ================================
+   Project Links (GitHub / Live)
+   ================================ */
+.project-links a {
+  display: inline-block;
+  padding: 6px 14px;
+  margin: 5px;
+  background: #38bdf8;
+  color: #0f172a;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* ================================
+   Fade-in Animation for Cards
+   ================================ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ RESUME SECTION STYLING */
+
+/* ================================
+   Resume Section Container
+   ================================ */
+#resume {
+  /* background-color: #f9f9f9; */
+  padding: 40px 10%;
+}
+
+.section-resume {
+  text-align: center;
+  /* padding: 40px; */
+  /* background-color: #fff; */
+  /* border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.My-Resume {
+  font-size: 3rem;
+  margin-bottom: 70px;
+  /* color: #333; */
+}
+
+/* ================================
+   Layout Structure
+   ================================ */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Suggestion: makes layout wrap on smaller screens */
+}
+
+/* ================================
+   Left Side: Resume Viewer
+   ================================ */
+.containerresume {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#resumeViewer {
+  width: 96%;
+  height: 890px;
+  border-radius: 8px;
+}
+
+/* Resume Action Buttons */
+.resume-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Suggestion: buttons stack on small screens */
+}
+
+.resume-actions button,
+.resume-actions input {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resume-actions button:hover,
+.resume-actions input:hover {
+  background-color: #0056b3;
+}
+
+/* ================================
+   Right Side: Resume Info Panel
+   ================================ */
+.resume {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left; /* All content aligned left */
+}
+
+.resume-header {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.resume-location {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* ================================
+   Resume Sections & Items
+   ================================ */
+.resume-section {
+  margin-bottom: 10px;
+}
+
+.resume-section h2 {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+.resume-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.resume-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.resume-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume-item,
+#resume-item-Skills {
+  font-size: 1rem;
+  color: #555;
+    /* padding: 10px; */
+}
+/* #resume-item-Skills  */
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .containerresume,
+  .resume {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* ================================
+   Special Case: Center Heading
+   ================================ */
+.resume > h2 {
+  text-align: center;
+}             
+
+
+/* ================================
+   Contact Section Wrapper
+   ================================ */
+.contact-section {
+  padding: 60px 20px;
+  background: #1e293b;
+  color: white;
+  text-align: center;
+}
+
+.contact-section h3 {
+  font-size: 3rem;
+  color: #ffcc00fd;
+  margin-bottom: 21px;
+}
+
+.contact-desc {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   Layout Structure
+   ================================ */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 16px 32px rgba(56, 189, 248, 0.3);
+  animation: fadeInUp 1s ease forwards;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+}
+
+/* ================================
+   Contact Info Panel
+   ================================ */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.contact-socials a {
+  font-size: 0.95rem;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-left: 4px;
+  border-left: 3px solid #38bdf8;
+}
+
+.contact-socials a:hover {
+  color: #0ea5e9;
+  border-left-color: #0ea5e9;
+}
+
+/* ================================
+   Contact Form
+   ================================ */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #38bdf8;
+  background: #1e293b;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  color: #0f172a;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+}
+
+/* ================================
+   Animation
+   ================================ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   Glowing Border Effect
+   ================================ */
+.glow-border {
+  position: relative;
+  border-radius: 20px;
+  padding: 40px;
+  background: #0f172a;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(56, 189, 248, 0.2);
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, #38bdf8, #0ea5e9, #06b6d4, #38bdf8);
+  background-size: 600% 600%;
+  animation: borderAnimation 5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes borderAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ================================
+   Footer Section
+   ================================ */
+.site-footer {
+  padding: 21px 20px 20px;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  box-shadow: 0px -9px 20px 20px rgba(56, 189, 248, 0.2);
+  position: relative;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+/* ================================
+   Footer Container
+   ================================ */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 0;
+  border-bottom: 1px solid #334155;
+}
+
+/* ================================
+   Footer Headings
+   ================================ */
+.footer-about h4,
+.footer-links h5,
+.footer-social h5 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+/* ================================
+   Footer Links
+   ================================ */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links ul li {
+  margin-bottom: 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #cbd5e1;
+  transition: all 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffcc02f2;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+/* ================================
+   Footer Social Icons
+   ================================ */
+.footer-social .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.social-icons a {
+  display: flex; /* Ensures icons center inside the anchor */
+  align-items: center;
+  justify-content: center;
+  background-color: #faf8f5;
+  border-radius: 50%;
+  padding: 6px;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+.footer-social .social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social .social-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #f8cb38);
+}
+
+/* ================================
+   Footer Bottom Text
+   ================================ */
+.footer-bottom {
+  text-align: center;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* ================================
+   Scroll to Top Button
+   ================================ */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background: #38bdf8;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #38bdf8;
+  display: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+
+#scrollToTopBtn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+
