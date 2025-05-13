@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Deepak Kumar - Full Stack Developer Portfolio">
+    <meta name="keywords" content="Deepak, Kumar, portfolio, web developer, full stack, React, Node.js">
+    <meta name="author" content="Deepak Kumar">
+  
+    
+    <title>Deepak Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- AOS CSS -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body id="dark-mode" class="ligh-mode">
+    <!-- ✅ NAVIGATION BAR -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">Deepak<span class="dotdev">.dev</span></h1>
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li><a href="./pages/skills.html">Skills</a></li>
+                    <li><a href="./pages/projects.html">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                    <li class="search-container">
+                        <div class="search-bar">
+                            <input type="text" id="searchInput" placeholder="Search" />
+                            <button class="search-btn">🔍</button>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dark-mode-toggle" class="btn">🌙</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  
+
+    <!-- ✅ HERO SECTION -->
+    <main>
+        <section id="hero" class="hero">
+            <div class="home-container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Deepak Kumar</span></h1>
+                    <h2><span id="typed-text"></span></h2>
+                    <p>Full-Stack Web Developer | Dedicated to crafting modern, scalable, and user-friendly web
+                        applications using the latest technologies. |
+                        Passionate about solving real-world problems through clean code, intuitive UI/UX design, and
+                        efficient backend architecture.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn">Contact Me</a>
+                        <a href="resume/Deepak-Resume.pdf" class="btn" download>Download Resume</a>
+
+                        <div class="home-footer-social">
+                            <div class="home-social-icons">
+                                <a href="https://github.com/Deepakumar011?tab=repositories/" target="_blank"><img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                        alt="GitHub"  rel="noopener noreferrer"/>
+                                <a href="https://www.linkedin.com/in/deepak-kumar-359481251/" target="_blank"><img
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                                        alt="LinkedIn"  rel="noopener noreferrer"/>
+                                <a href="mailto:deepakchaudhary954864@gmail.com"  rel="noopener noreferrer">✉️</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+<div class="profile-image" data-aos="fade-left">
+    <img src="images/profile.jpeg" alt="Deepak Kumar" class="rounded-full" />
+</div>
+                
+            </div>
+        </section>
+        </section>
+<!-- about  -->
+    <section id="about">
+  <h2>About Me</h2>
+
+  <div class="about-content">
+    <!-- Profile Image -->
+    <div class="profile-img-wrapper">
+      <img src="images/profile.jpeg" alt="Deepak Kumar" class="profile-pic" id="profile-pic" width="150" />
+    </div>
+
+    <!-- About Text with Read More -->
+    <div class="about-text">
+      <p>
+        Hello! I'm Deepak Kumar, a passionate and dedicated Full Stack Web Developer with expertise in
+        <strong>React.js, Node.js, JavaScript, HTML, CSS, Tailwind CSS, Bootstrap, MySQL</strong>, and version control using
+        Git and GitHub.
+        I have successfully built several web projects, including a fully functional <strong>e-commerce website</strong>, a
+        personal portfolio, and clones of popular platforms like RedBus, Gmail, and YouTube. I focus on creating
+        clean, responsive, and scalable web applications that provide exceptional user experiences.
+        <span id="more-text" class="hidden">
+          In addition to my technical skills, I have gained over <strong>1 year of professional experience</strong> in
+          Business Development, Sales, Client Handling, and Team Collaboration through roles at Urban Company, Cognet
+          Business Services, and an internship at To-Let Globe. This real-world experience has strengthened my
+          communication, teamwork, and problem-solving abilities.
+          <br />
+          I'm deeply passionate about technology, continuous learning, and building products that make a real impact.
+          I'm currently seeking opportunities to apply my skills and contribute to innovative, growth-driven teams
+          while further enhancing my development expertise.
+        </span>
+      </p>
+      <button id="read-more-btn" class="read-more-btn">Read More</button>
+    </div>
+  </div>
+</section>
+
+ <!-- ✅ SKILLS SECTION -->
+        <section id="skills">
+            <section class="skills-section">
+                <h2><span>My</span> Skills</h2>
+                <div class="skills-container">
+
+                    <div class="skills-left">
+                        <h3>Technical Skills</h3>
+
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/color/48/html-5.png" />
+                            <span>HTML</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/color/48/css3.png" />
+                            <span>CSS</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 60%;">60%</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/color/48/javascript.png" />
+                            <span>JavaScript</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 85%;">85%</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/officel/48/react.png" />
+                            <span>React</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 50%;">50%</div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/office/48/nodejs.png" />
+                            <span>Nodejs</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 60%;">60%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/office/48/nodejs.png" />
+                            <span>Express</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 65%;">65%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <img src="https://img.icons8.com/office/48/nodejs.png" />
+                            <span>MongoDB</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 70%;">70%</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skills-right">
+                        <h3>Professional Skills</h3>
+                        <div class="circle-container">
+
+                            <div class="circle-wrapper">
+                                <div class="circle" data-percent="90">
+                                    <div class="number">90%</div>
+                                </div>
+                                <p>Creativity</p>
+                            </div>
+
+                            <div class="circle-wrapper">
+                                <div class="circle" data-percent="65">
+                                    <div class="number">65%</div>
+                                </div>
+                                <p>Communication</p>
+                            </div>
+
+                            <div class="circle-wrapper">
+                                <div class="circle" data-percent="75">
+                                    <div class="number">75%</div>
+                                </div>
+                                <p>Problem Solving</p>
+                            </div>
+
+                            <div class="circle-wrapper">
+                                <div class="circle" data-percent="85">
+                                    <div class="number">85%</div>
+                                </div>
+                                <p>Teamwork</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <section class="tools-section">
+                        <h3>Tools & Technologies</h3>
+                        <div class="tools-container">
+
+                            <div class="tool-box" title="Git - Version Control Tool">
+                                <a href="https://git-scm.com/" target="_blank">
+                                    <i class="fab fa-git-alt"></i>
+                                    <div class="tool-name">Git</div>
+                                </a>
+                            </div>
+
+                            <div class="tool-box" title="GitHub - Code Hosting">
+                                <a href="https://github.com/" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <div class="tool-name">GitHub</div>
+                                </a>
+                            </div>
+
+                            <div class="tool-box" title="VS Code - Code Editor">
+                                <a href="https://code.visualstudio.com/" target="_blank">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                        alt="VS Code">
+                                    <div class="tool-name">VS Code</div>
+                                </a>
+                            </div>
+
+                            <div class="tool-box" title="HTML5 - Markup Language">
+                                <i class="fab fa-html5"></i>
+                                <div class="tool-name">HTML5</div>
+                            </div>
+
+                            <div class="tool-box" title="CSS3 - Styling Language">
+                                <i class="fab fa-css3-alt"></i>
+                                <div class="tool-name">CSS3</div>
+                            </div>
+
+                            <div class="tool-box" title="JavaScript - Web Scripting">
+                                <i class="fab fa-js"></i>
+                                <div class="tool-name">JavaScript</div>
+                            </div>
+
+                            <div class="tool-box" title="React - Frontend Framework">
+                                <i class="fab fa-react"></i>
+                                <div class="tool-name">React</div>
+                            </div>
+
+                            <div class="tool-box" title="Node.js - Backend Runtime">
+                                <i class="fab fa-node-js"></i>
+                                <div class="tool-name">Node.js</div>
+                            </div>
+
+                            <div class="tool-box" title="MySQL - Relational Database">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL">
+                                <div class="tool-name">MySQL</div>
+                            </div>
+
+                            <div class="tool-box" title="MongoDB - NoSQL Database">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                    alt="MongoDB">
+                                <div class="tool-name">MongoDB</div>
+                            </div>
+
+                            <div class="tool-box" title="Postman - API Testing Tool">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                                    alt="Postman">
+                                <div class="tool-name">Postman</div>
+                            </div>
+
+                            <div class="tool-box" title="Figma - UI Design Tool">
+                                <i class="fab fa-figma"></i>
+                                <div class="tool-name">Figma</div>
+                            </div>
+
+                        </div>
+                    </section>
+            </section>
+        </section>
+
+       
+        <!-- 📁 Paste this in your HTML file -->
+        <div id="projects">
+            <section class="projects-section">
+                <h3 class="My-Projects">My Projects</h3>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.2s;">
+                            <div class="image-slider">
+                                <img src="images/webPage.png" alt="Project 1">
+                            </div>
+                            <div class="project-content">
+                                <h4>Web Page UI Clone</h4>
+                                <p>A responsive clone of YouTube built with HTML, CSS & JavaScript.</p>
+                                <span class="stack">HTML | CSS | JS</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/Deepakumar011/pw-projects/tree/main/project-2/02%20Web%20Page%20UI%20Clone"
+                                        target="_blank">🔗 Live</a>
+                                    <a href="https://github.com/Deepakumar011/pw-projects/tree/main/project-2/02%20Web%20Page%20UI%20Clone"
+                                        target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.4s;">
+                            <div class="image-slider">
+                                <img src="images/gmailClone.png" alt="Project 2">
+                                <!-- Add more images if required for the slider -->
+                                <!-- <img src="images/project-images/youtub2.png" alt="Project 1 - Alt 2">
+                        <img src="images/project-images/youtub3.png" alt="Project 1 - Alt 3"> -->
+                            </div>
+
+
+                            <div class="project-content">
+                                <h4>Gmail clone</h4>
+                                <p>Full-stack website with product listing, cart, and checkout flow.</p>
+                                <span class="stack">React | Node.js | MySQL</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/Deepakumar011/pw-projects/tree/main/project-4/01%20Gmail%20Clone"
+                                        target="_blank">🔗 Live</a>
+                                    <a href="https://github.com/Deepakumar011/pw-projects/tree/main/project-4/01%20Gmail%20Clone"
+                                        target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.6s;">
+                            <div class="image-slider">
+                                <video autoplay muted loop playsinline>
+                                    <source src="videos/Self-potpolio.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="project-content">
+                                <h4>Portfolio Website</h4>
+                                <p>My personal portfolio to showcase skills, tools, and projects.</p>
+                                <span class="stack">HTML | CSS |Vs code</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/Deepakumar011/my-portfolio" target="_blank">🔗 Live</a>
+                                    <a href="https://github.com/Deepakumar011/my-portfolio" target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.2s;">
+                            <div class="image-slider">
+                                <video autoplay muted loop playsinline>
+                                    <source src="videos/Online Bus Ticket Booking.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="project-content">
+                                <h4>Online RedBus Clone </h4>
+                                <p>A responsive clone of YouTube built with HTML, CSS & JavaScript.</p>
+                                <span class="stack">HTML | CSS | JS</span>
+                                <div class="project-links">
+                                    <a href="#" target="_blank">🔗 Live</a>
+                                    <a href="#" target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.4s;">
+                            <div class="image-slider">
+                                <video autoplay muted loop playsinline>
+                                    <source src="videos/Snake Game.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <!-- </div> -->
+
+
+                            <div class="project-content">
+                                <h4>🐍 Snake Game </h4>
+                                <p>Full-stack website with product listing, cart, and checkout flow.</p>
+                                <span class="stack">React | Node.js | MySQL</span>
+                                <div class="project-links">
+                                    <!-- <span class="stack"><a href="">1</a> | <a href="">2</a> | <a href="">3</a></span> -->
+                                    <a href="project/Snake_Game_Project-master-main/index.html" target="_blank">🔗
+                                        Live</a>
+                                    <a href="#" target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+
+                    <div class="project-card">
+                        <div class="project-card" style="animation-delay: 0.6s;">
+                            <div class="image-slider">
+                                <img src="images/resumeTemplate.png" alt="Project 6">
+                                <!-- Add more images if required for the slider -->
+                                <!-- <img src="images/project-images/youtub2.png" alt="Project 1 - Alt 2">
+                    <img src="images/project-images/youtub3.png" alt="Project 1 - Alt 3"> -->
+                            </div>
+                            <div class="project-content">
+                                <h4> Resume Template </h4>
+                                <p>My personal portfolio to showcase skills, tools, and projects.</p>
+                                <span class="stack">HTML | CSS | Vs Code</span>
+                                <div class="project-links">
+                                    <a href="#" target="_blank">🔗 Live</a>
+                                    <a href="#" target="_blank">💻 Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ✅ RESUME SECTION -->
+        <section id="resume">
+            <section class="section section-resume">
+                <h2 class="My-Resume">My Resume</h2>
+                <div class="container grid grid-two-column">
+                    <!-- resume left side -->
+                    <div class="containerresume" >
+                        <div class="resume-box">
+                            <iframe id="resumeViewer" src="resume/Deepak-Resume.pdf" width="98%"
+                                height="500%"></iframe>
+                            <div class="resume-actions">
+                                <!-- <input type="file" id="resumeInput" accept="application/pdf" onchange="changeResume(event)"> -->
+                                <button onclick="document.getElementById('resumeInput').click()">Change Resume</button>
+                                <button onclick="downloadResume()">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- resume right side -->
+                    <div class="resume">
+                        <h2>Highlighted Information</h2>
+                        <h1 class="resume-header">Deepak Kumar</h1>
+                        <p class="resume-location">Location: UP, India</p>
+                        <hr />
+                        <!-- Work Experience -->
+                        <div class="resume-section">
+                            <h2>Work Experience</h2>
+                            <div class="resume-item">
+                                <h3>Business Development Associate</h3>
+                                <p>Urban Company | Mar 2024 - Present</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- Education -->
+                        <div class="resume-section">
+                            <h2>Education</h2>
+                            <div class="resume-item">
+                                <h3>B.Tech in Computer Science & Engineering</h3>
+                                <p>Dr. A.P.J Abdul Kalam Technical University | Aug 2020 - July 2024</p>
+                                <p>SGPA: 7.4</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- Skills -->
+                        <div class="resume-section">
+                            <h2>Skills</h2>
+                            <ul class="resume-item" , id="resume-item-Skills" type="none">
+                                <li>Frontend: HTML, CSS, JS, React.js</li>
+                                <li>Backend: Node.js, MySQL</li>
+                                <li>Version Control: Git, GitHub</li>
+                            </ul>
+                        </div>
+                        <hr />
+                        <!-- Projects -->
+                        <div class="resume-section">
+                            <h2>Projects</h2>
+                            <ul class="resume-item" ,id="resume-item-Skills" type="none">
+                                <li><strong>E-commerce Site</strong> (React.js, Node.js)</li>
+                                <li><strong>Portfolio Website</strong> (HTML, CSS, JS)</li>
+                                <li><strong>RedBus Clone</strong> (React.js)</li>
+                            </ul>
+                        </div>
+                        <hr />
+                        <!-- Certifications -->
+                        <div class="resume-section">
+                            <h2>Certifications</h2>
+                            <div class="resume-item">
+                                <h3>Full Stack Development Course</h3>
+                                <p>Physics Wallah | April 2023 - Present</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Online Profiles -->
+                        <div class="resume-section">
+                            <h2>Online Profiles</h2>
+                            <div class="resume-item">
+                                <h3>LinkedIn</h3>
+                                <p><a href="https://www.linkedin.com/in/deepak-kumar" target="_blank">Deepak Kumar
+                                        LinkedIn</a></p>
+                            </div>
+                            <div class="resume-item">
+                                <h3>GitHub</h3>
+                                <p><a href="https://github.com/deepak-kumar" target="_blank">Deepak Kumar GitHub</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- 📍 Contact Section HTML -->
+        <section class="contact-section" id="contact">
+            <h3>Contact Me</h3>
+            <p class="contact-desc">Let's connect and create something amazing together!</p>
+            <div class="contact-wrapper">
+                <div class="contact-card glow-border">
+                    <!-- Your contact-info and contact-form inside here -->
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <p>📧 deepakkumar@example.com</p>
+                            <p>📞 +91-9876543210</p>
+                            <p>📍 Aligarh, India</p>
+                            <div class="contact-socials">
+                                <a href="https://github.com/deepak" target="_blank">🐙 GitHub</a>
+                                <a href="https://linkedin.com/in/deepak" target="_blank">💼 LinkedIn</a>
+                                <a href="mailto:deepakkumar@example.com">📩 Email</a>
+                            </div>
+                        </div>
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <input type="text" placeholder="Your Name" required />
+                            <input type="email" placeholder="Your Email" required />
+                            <textarea rows="4" placeholder="Your Message..." required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          </main>
+        <!-- 🌐 Footer -->
+ 
+    <!-- <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>Deepak Kumar</h4>
+                <p>Full Stack Developer | Building amazing things</p>
+            </div>
+            <div class="footer-social">
+                <h5>Connect</h5>
+                <div class="social-icons">
+                    <a href="https://github.com/Deepakumar011?tab=repositories" target="_blank"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" /></a>
+                    <a href="https://www.linkedin.com/in/deepak-kumar-359481251/" target="_blank"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                            alt="LinkedIn" /></a>
+                    <a clss="email" href="mailto:deepakchaudhary954864@gmail.com">✉️</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Deepak Kumar — All Rights Reserved</p>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">⬆️</button>
+
+        <!-- <button id="scrollToTopBtn">⬆️</button> --
+
+    </footer> -->
+
+    <!-- ================================
+     FOOTER SECTION
+================================ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- About -->
+            <div class="footer-about">
+                <h4>About Me</h4>
+                <p>I’m Deepak Kumar, a passionate full-stack developer building user-friendly, modern web applications
+                    using React, Node.js, and more.</p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+                <h5>Follow Me</h5>
+                <div class="social-icons">
+                    <a href="https://github.com/Deepakumar011?tab=repositories" target="_blank"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" rel="noopener noreferrer" /></a>
+                    <a href="https://www.linkedin.com/in/deepak-kumar-359481251/" target="_blank"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                            alt="LinkedIn" rel="noopener noreferrer" /></a>
+                    <a clss="email" href="mailto:deepakchaudhary954864@gmail.com" rel="noopener noreferrer">✉️</a>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Deepak Kumar | All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- // about section  -->
+    <!-- <script>
+        // Step 4: script.js (Typing Animation)// javascript
+
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+        const toggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+
+        // Hamburger click – toggle menu and change icon
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.textContent = navLinks.classList.contains("active") ? "✖" : "☰"; // ☰ = menu, ✖ = close
+        });
+        // Dark mode toggle
+        toggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            toggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+
+
+        // search bar functionality
+
+        document.querySelector(".search-btn").addEventListener("click", function () {
+            var searchText = document.getElementById("searchInput").value;
+            if (searchText) {
+                console.log("Searching for:", searchText);
+                // You can perform the search action here, e.g., filter items, make an API request, etc.
+                document.getElementById("searchInput").value = ""; // Clear the search box after search
+            } else {
+                console.log("Search input is empty");
+            }
+        });
+
+
+
+
+
+        // herro section
+        const text = [
+            "Full Stack Web Developer",
+            "React & Node.js Developer",
+            "Tech Enthusiast with a Focus on Continuous Learning",
+            "Frontend & Backend Expertise",
+            "Always Exploring New Technologies and Frameworks",
+        ];
+
+        let i = 0;
+        let j = 0;
+        let currentText = "";
+        let isDeleting = false;
+
+        function type() {
+            const typingElement = document.getElementById("typed-text");
+            if (!typingElement) return;
+
+            currentText = text[i];
+
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, j--);
+                if (j < 0) {
+                    isDeleting = false;
+                    i = (i + 1) % text.length;
+                    setTimeout(type, 500); // Pause before typing next
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentText.substring(0, j++);
+                if (j > currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1500); // Pause after full text
+                    return;
+                }
+            }
+
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+
+        window.onload = type;
+
+        // about section  Read More";"Read Less";
+
+        const btn = document.getElementById("read-more-btn");
+        const moreText = document.getElementById("more-text");
+        btn.addEventListener("click", () => {
+            if (moreText.classList.contains("show")) {
+                moreText.classList.remove("show");
+                btn.textContent = "Read More";
+            } else {
+                moreText.classList.add("show");
+                btn.textContent = "Read Less";
+            }
+        });
+
+
+
+        // skills section// JavaScript for Clickable Skill Cards (Optional)
+
+        document.querySelectorAll(".circle").forEach((circle) => {
+            const percent = parseInt(circle.getAttribute("data-percent"));
+            const deg = (percent / 100) * 360;
+            setTimeout(() => {
+                circle.style.setProperty(
+                    "--gradient",
+                    `conic-gradient(#38bdf8 ${deg}deg, #334155 ${deg}deg)`
+                );
+            }, 200);
+        });
+        window.addEventListener("load", () => {
+            document.querySelectorAll(".fill").forEach((el) => {
+                const finalWidth = el.style.width;
+                el.style.width = "0";
+                setTimeout(() => {
+                    el.style.width = finalWidth;
+                }, 100);
+            });
+        });
+        document.querySelectorAll(".circle").forEach((circle) => {
+            const percent = parseInt(circle.getAttribute("data-percent"));
+            const deg = (percent / 100) * 360;
+            setTimeout(() => {
+                circle.style.background = `conic-gradient(#38bdf8 ${deg}deg, #334155 ${deg}deg)`;
+            }, 300);
+        });
+
+        document.querySelectorAll(".fill").forEach((fill) => {
+            const width = fill.style.width;
+            fill.style.setProperty("--width", width);
+            fill.style.width = "0";
+            setTimeout(() => {
+                fill.style.width = width;
+            }, 100);
+        });
+
+
+
+        // contact section // JavaScript for Form Submission Alert (Optional)
+        function handleSubmit(event) {
+            event.preventDefault(); // stop default form submit
+            alert("✅ Message sent successfully!");
+            event.target.reset(); // reset form fields
+        }
+
+        //                 FOOTER            ///////////
+
+        const btns = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function () {
+            if (
+                document.body.scrollTop > 200 ||
+                document.documentElement.scrollTop > 200
+            ) {
+                btns.style.display = "block";
+            } else {
+                btns.style.display = "none";
+            }
+        };
+        btns.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        // Show button on scroll
+        window.onscroll = function () {
+            const btns = document.getElementById("scrollToTopBtn");
+            if (
+                document.body.scrollTop > 200 ||
+                document.documentElement.scrollTop > 200
+            ) {
+                btns.style.display = "block";
+            } else {
+                btns.style.display = "none";
+            }
+        };
+
+        // Scroll to top on click
+        //////////////////////////////////////////////////////////////////////////
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+        ////////////////////////////////////////////////////////////////////////
+        // Animate Horizontal Bars
+        document.querySelectorAll(".progress").forEach((bar) => {
+            const width = bar.getAttribute("data-width");
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 300);
+        });
+
+        // Animate Circular Bars
+        document.querySelectorAll(".circle").forEach((circle) => {
+            const percent = circle.getAttribute("data-percent");
+            const degrees = (percent / 100) * 360;
+            setTimeout(() => {
+                circle.style.background = `conic-gradient(#38bdf8 ${degrees}deg, #334155 ${degrees}deg)`;
+            }, 500);
+            const number = document.createElement("div");
+            number.textContent = percent + "%";
+            number.style.position = "absolute";
+            number.style.fontSize = "1.2rem";
+            circle.insertBefore(number, circle.firstChild);
+        });
+
+        // Initialize AOS.js
+
+        AOS.init();
+
+        //resume section
+        function changeResume(event) {
+            const file = event.target.files[0];
+            if (file && file.type === "application/pdf") {
+                const fileURL = URL.createObjectURL(file);
+                document.getElementById("resumeViewer").src = fileURL;
+            } else {
+                alert("Please upload a PDF file.");
+            }
+        }
+
+        function downloadResume() {
+            const link = document.createElement("a");
+            link.href = document.getElementById("resumeViewer").src;
+            link.download = "Deepak-Resume.pdf";
+            link.click();
+        }
+
+        // Resume section
+        function changeResume(event) {
+            const file = event.target.files[0];
+            if (file?.type === "application/pdf") {
+                document.getElementById("resumeViewer").src = URL.createObjectURL(file);
+            } else {
+                alert("Please upload a PDF file.");
+            }
+        }
+
+        function downloadResume() {
+            const link = document.createElement("a");
+            link.href = document.getElementById("resumeViewer").src;
+            link.download = "Deepak-Resume.pdf";
+            link.click();
+        }
+
+
+
+        // Initialize AOS.js
+
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: true, // Whether animation happens once
+        });
+
+    </script> -->
+</body>
+
+</html>
