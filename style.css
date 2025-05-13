@@ -749,9 +749,9 @@ Add this at the bottom for better mobile layout: */
    Projects Section Styling
    ================================ */
 .projects-section {
-  padding: 25px 100px;
-  background: #adafb2; /* Light gray background */
-  color: white;
+  padding: 30px 100px;
+  background: #e4e4e6; /* Light gray background */
+  color: rgb(8, 8, 8);
   text-align: center;
 }
 
@@ -858,7 +858,12 @@ Add this at the bottom for better mobile layout: */
   font-size: 0.85rem;
   color: #94a3b8;
 }
-
+.projects-grid{
+  margin-top: 25px;
+}
+.My-Projects{
+  font-size: 2rem;
+}
 /* ================================
    Project Links (GitHub / Live)
    ================================ */
